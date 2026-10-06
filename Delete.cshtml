@@ -1,0 +1,27 @@
+@page "{id:int}"
+@model DeleteModel
+
+<h1>Delete Post</h1>
+
+@if (Model.Post == null)
+{
+    <p>Post not found.</p>
+}
+else
+{
+    <h2>Are you sure you want to delete this post?</h2>
+
+    <h3>@Model.Post.Title</h3>
+
+    <p>@Model.Post.Body</p>
+
+    <form method="post">
+        <input type="hidden" asp-for="Post.Id" />
+
+        <button type="submit">Yes, Delete</button>
+
+        <a asp-page="/Details" asp-route-id="@Model.Post.Id">
+            Cancel
+        </a>
+    </form>
+}
