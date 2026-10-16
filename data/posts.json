@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Title": "Updated Blog Post",
+    "Body": "Test Blog ",
+    "CreatedUtc": "2026-09-28T02:13:20.7670885Z"
+  },
+  {
+    "Id": 2,
+    "Title": "DI Test Post",
+    "Body": "This post is testing the JSON repository.",
+    "CreatedUtc": "2026-10-06T01:38:28.7768203Z"
+  },
+  {
+    "Id": 5,
+    "Title": "DI Test Post",
+    "Body": "This is a JSON test post \r\n",
+    "CreatedUtc": "2026-10-06T01:41:01.7022115Z"
+  },
+  {
+    "Id": 6,
+    "Title": "Repository test post",
+    "Body": "This post is being saved by the JSON repository.",
+    "CreatedUtc": "2026-10-06T02:05:30.9791297Z"
+  }
+]

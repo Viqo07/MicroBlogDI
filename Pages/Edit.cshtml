@@ -1,0 +1,41 @@
+@page "{id:int}"
+@model EditModel
+
+<h1>Edit Post</h1>
+
+@if (Model.Post == null)
+{
+    <p>Post not found.</p>
+}
+else
+{
+    <form method="post">
+
+        <input type="hidden" asp-for="Post.Id" />
+
+        <div>
+            <label asp-for="Post.Title"></label>
+            <input asp-for="Post.Title" />
+            <span asp-validation-for="Post.Title"></span>
+        </div>
+
+        <div>
+            <label asp-for="Post.Body"></label>
+            <textarea asp-for="Post.Body"></textarea>
+            <span asp-validation-for="Post.Body"></span>
+        </div>
+
+        <button type="submit">Save Changes</button>
+
+    </form>
+
+    <p>
+        <a asp-page="/Details" asp-route-id="@Model.Post.Id">
+            Cancel
+        </a>
+    </p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
